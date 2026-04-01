@@ -1,0 +1,30 @@
+version: 1
+
+recall:
+  default_limit: 12
+  closeout_limit: 8
+  prefer_file_scoped_recall: true
+
+scoring:
+  file_match: 50
+  additional_file_match: 10
+  tag_match: 20
+  query_term_match: 6
+  recent_record: 4
+
+capture:
+  auto_shared:
+    - decision
+    - convention
+    - workflow
+    - pitfall
+  auto_local:
+    - session
+    - preference
+  ask_before_write:
+    - reference
+
+retention:
+  local_session_days: 14
+  local_preference_days: 90
+  ignore_expired_records: true

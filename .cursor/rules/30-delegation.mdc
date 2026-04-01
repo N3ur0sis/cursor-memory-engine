@@ -1,0 +1,13 @@
+---
+description: Delegate with compact packets and write back durable choices
+alwaysApply: true
+---
+
+# Delegation And Capture
+
+- When spawning subagents, pass a compact packet: goal, constraints, files, recalled memory, and acceptance checks.
+- Do not delegate with only the raw user prompt when durable memory is relevant.
+- Save clear repo-wide technical choices with `tools/agent/capture.sh`.
+- Save user-specific workflow preferences and active task state to local memory, not shared memory.
+- When durability is unclear, ask before writing memory.
+- Before wrapping up, run `tools/agent/closeout.sh` and capture any missing durable choices.

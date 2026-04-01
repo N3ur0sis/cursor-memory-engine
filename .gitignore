@@ -1,0 +1,6 @@
+# Optional root-level ignores to merge into the target repo.
+# The nested .cursor-memory/local/.gitignore is usually enough.
+.cursor-memory/local/*.json
+.cursor-memory/local/*.jsonl
+tools/agent/__pycache__/
+tools/agent/*.pyc

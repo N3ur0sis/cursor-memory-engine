@@ -1,0 +1,12 @@
+---
+description: Normalize requests into compact task packets
+alwaysApply: true
+---
+
+# Intake And Planning
+
+- Normalize every non-trivial request into a task packet with goal, constraints, files, durable choices, acceptance checks, and open questions.
+- For multi-step work, keep the packet explicit and update it when the direction changes.
+- Use `tools/agent/intake.sh` when you want the active task packet persisted into local session memory.
+- Plan before editing when the task touches multiple files, architectural choices, or external behavior.
+- Break execution into small verifiable steps and revisit the packet before delegating.
