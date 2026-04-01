@@ -177,7 +177,11 @@ seed_file() {
   mkdir -p "$(dirname "$dest")"
 
   if [ ! -e "$dest" ] || [ ! -s "$dest" ]; then
-    cp "$src" "$dest"
+    if [ -f "$src" ]; then
+      cp "$src" "$dest"
+    else
+      : > "$dest"
+    fi
     SEEDED=$((SEEDED + 1))
     say "seeded $rel"
   else
